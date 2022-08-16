@@ -2,6 +2,7 @@ frase= 'tudo e mais um pouco'
 print(frase.count('u'))#mostra quantas vezes a letra indicada aparece na frase.
 print(len(frase))#conta o tamnho da palavra.
 print(frase.find('pou'))#acha a palavra indicada e diz em qual posicao ela comeca.
+print(frase.rfind('a'))#acha a palavra/letra indicada da direita para esquerda.
 print('mais' in frase)#diz se a palavra indicada existe na frase.
 print(frase.replace('u','y'))#faz a subistituicao de uma palavra.
 print(frase.upper())#faz tudo ficar em maiuscula.
