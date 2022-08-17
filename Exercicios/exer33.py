@@ -5,4 +5,4 @@ lista = [n1, n2, n3]
 maior= max(lista)
 menor= min(lista)
 print(f'o numero maior é {maior}')
-print(f'o menornumero é {menor}')
+print(f'o menor numero é {menor}')
