@@ -8,4 +8,3 @@ elif idade == 18:
     print(f'Voce esta na idade do alistamento obrigatoria, Va se alistar! ')
 else:
     print(f'Voce ja passou da idade do alistamento obrigatorio! passaram-se {idade-18} anos')
-

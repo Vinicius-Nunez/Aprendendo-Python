@@ -8,7 +8,7 @@ elif ano <=14:
     print('categoria Infantil!')
 elif ano <=19:
     print('categoria Junior!')
-elif ano == 20:
+elif ano <= 25:
     print('categoria Senior!')
 else:
     print('categoria Master!!')
