@@ -1,10 +1,7 @@
-def fatorial(n):
-    f = 1
-    for c in range(n,0,-1):
-        f+=c
-        print(c, end='-')
-    return f
-
+import Funcoees
+from Funcoees import fatorial,dobro,raiz
 num = int(input('Digite um valor: '))
 fat=fatorial(num)
 print(f'\nO fatorial de {num} é {fat}')
+print(f'O dobro de {num} é {dobro(num)}')
+print(f'A raiz quadrada de {num} é {raiz(num)}')
