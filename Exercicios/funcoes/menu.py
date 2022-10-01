@@ -1,3 +1,6 @@
+from time import sleep
+
+
 def leiaint(num):
     while True:
         try:
@@ -26,7 +29,7 @@ def menu(lista):
         print(f'\033[1;90m{c}\033[m - \033[1;96m{item}\033[m')
         c+=1
     print(linha())
-    opc = leiaint('Sua Opção: ')
+    opc = leiaint('\033[34mSua Opção:\033[m ')
     return opc
 
     
@@ -38,6 +41,7 @@ def arquivoexiste(nome):
         return False
     else:
         return True
+
 
 def criararquivo(nome):
     try:
@@ -54,6 +58,25 @@ def lerarquivo(nome):
     except:
         print('Erro ao ler o arquivo')
     else:
-        cabecalho('PESSOAS CADASTRADAS')
-        print(a.read())
-    
+        cabecalho('\033[32mPESSOAS CADASTRADAS\033[m')
+        for linha in a:
+            dado = linha.split('-')
+            dado[1] = dado[1].replace('\n', '')
+            print(f'{dado[0]:<30}{dado[1]:>3} \033[33manos\033[m')
+        sleep(1)
+    finally:
+        a.close()
+
+def cadastrar(arq, nome='desconhecido', idade=0):
+    try:
+        a = open(arq, 'at')
+    except:
+        print('Houve um Erro na abertura do arquivo!')
+    else:
+        try:
+            a.write(f'\033[33m{nome}\033[m - \033[33m{idade}\033[m\n')
+        except:
+            print('houve um Erro na hora de escrever os dados!')
+        else:
+            print(f'Novo registro de \033[30m{nome}\033[m adicionado')
+            a.close()
